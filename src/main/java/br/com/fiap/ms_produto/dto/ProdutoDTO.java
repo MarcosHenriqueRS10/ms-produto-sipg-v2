@@ -4,6 +4,7 @@ import br.com.fiap.ms_produto.entities.Loja;
 import br.com.fiap.ms_produto.entities.Produto;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -13,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
-
+@Getter
 public class ProdutoDTO {
 
     private Long id;
