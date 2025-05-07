@@ -63,13 +63,13 @@ public class ProdutoService {
     }
 
     @Transactional
-    public ProdutoResponseDTO update(Long id, ProdutoDTO dto){
+    public ProdutoDTO update(Long id, ProdutoDTO dto){
 
         try{
             Produto entity = repository.getReferenceById(id);
             toEntity(dto, entity);
             entity = repository.save(entity);
-            return new ProdutoResponseDTO(entity);
+            return new ProdutoDTO(entity);
         } catch (EntityNotFoundException ex){
             throw new ResourceNotFoundException("Recurso não encontrado. Id: " + id);
         }
